@@ -87,7 +87,7 @@ function Solver(
     else
         # Note: we don't constraint the first state because we have no control authority over that anyway
         coupling_constraints_symbolic =
-            game.coupling_constraints(xs_symbolic[(begin + 1):end], us_symbolic)
+            game.coupling_constraints(xs_symbolic[(begin + 1):end], us_symbolic, context_symbolic)
     end
 
     # set up the duals for all constraints
